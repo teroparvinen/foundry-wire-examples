@@ -2,7 +2,7 @@
     "id": "wire-examples",
     "title": "Whistler's Item Rolls Extended - Example Items",
     "description": "Example items for WIRE",
-    "version": "0.10",
+    "version": "0.10.2",
     "authors": [
         {
             "name": "Tero Parvinen (Whistler#3253)"
