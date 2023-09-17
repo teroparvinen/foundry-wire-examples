@@ -1,0 +1,139 @@
+{
+  "name": "Ice Knife",
+  "type": "spell",
+  "img": "icons/magic/water/projectile-icecicle.webp",
+  "effects": [],
+  "flags": {
+    "wire": {
+      "checkedAbility": "",
+      "damageParts": [
+        {
+          "halving": "none",
+          "application": "immediate"
+        },
+        {
+          "halving": "none",
+          "application": "delayed"
+        }
+      ],
+      "conditions": [],
+      "override": {
+        "target": {
+          "value": "1"
+        }
+      },
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.11",
+      "saveImmunity": false,
+      "script": "this.registerFlowStep(\"splash\", true, async activation => {\n    const tokenUuid = activation.singleTarget.token.document.uuid;\n    await activation.spawnActivation(\"delayed\", { tokenUuid })\n});\n\nthis.registerFlowStep(\"setSplashTargets\", true, async activation => {\n    const token = game.wire.fromUuid(activation.config.tokenUuid).object;\n    const tokensInRange = [...canvas.scene.tokens.values()]\n        .map(td => td.object)\n        .filter(t => canvas.grid.measureDistance(token.center, t.center, { gridSpaces: true }) <= 5)\n\n    let first = true;\n    for (let target of tokensInRange) {\n        target.setTarget(true, { releaseOthers: first });\n        first = false;\n    }\n});\n\nreturn this.pick(\n    this.isImmediateApplication(\n        this.sequence(\n            this.applySelectedTargets(),\n            this.performAttackRoll(\n                this.performAttackDamageRoll(\n                    this.applyDamage(\n                        this.applyEffects(\n                            this.attackCompleted()\n                        )\n                    )\n                )\n            ),\n            this.performCustomStep(\"splash\")\n        )\n    ),\n    this.performCustomStep(\"setSplashTargets\",\n        this.confirmTargets(\n            this.performSavingThrow(\n                this.performSaveDamageRoll(\n                    this.applyDamage()\n                )\n            )\n        )\n    )\n);"
+    }
+  },
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": ""
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "",
+    "actionType": "rsak",
+    "attackBonus": "0",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "1d10",
+          "piercing"
+        ],
+        [
+          "2d6",
+          "cold"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "dex",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 1,
+    "school": "con",
+    "components": {
+      "vocal": false,
+      "somatic": true,
+      "material": true,
+      "ritual": false,
+      "concentration": false,
+      "value": ""
+    },
+    "materials": {
+      "value": "a drop of water or piece of ice",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "m7gKrZnSC3XR8ToV": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.2",
+    "coreVersion": "11.306",
+    "createdTime": 1670321810648,
+    "modifiedTime": 1694774674713,
+    "lastModifiedBy": "dBglmdrMUDMEh6ZW"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "E3x5xRh1OO1CDCS6",
+  "_key": "!items!E3x5xRh1OO1CDCS6"
+}

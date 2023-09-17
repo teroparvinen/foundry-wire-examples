@@ -1,0 +1,234 @@
+{
+  "name": "Searing Smite",
+  "type": "spell",
+  "img": "icons/skills/melee/strike-hammer-destructive-orange.webp",
+  "effects": [
+    {
+      "_id": "b0y6og802smy5cru",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(1+@config.upcastLevel)d6[fire]",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/plutonium/media/icon/spell/phb-searing-smite.webp",
+      "label": "Searing Smite",
+      "origin": "Actor.fRkIgd5cHxEEE8tk.Item.VMSGIiumu0Zxy0pZ",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "conditions": [
+            {
+              "condition": "target-hits.mwak",
+              "update": "apply-delayed"
+            }
+          ]
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!b4ZytnWnNIWo1ezk.b0y6og802smy5cru"
+    },
+    {
+      "_id": "ki3ddfoplxxrowum",
+      "changes": [
+        {
+          "key": "wire.custom.statusEffect",
+          "mode": 0,
+          "value": "Burning",
+          "priority": 0
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "modules/plutonium/media/icon/spell/phb-searing-smite.webp",
+      "label": "Searing Flames",
+      "origin": "Actor.fRkIgd5cHxEEE8tk.Item.VMSGIiumu0Zxy0pZ",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-target",
+              "update": "apply-overtime"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!b4ZytnWnNIWo1ezk.ki3ddfoplxxrowum"
+    }
+  ],
+  "flags": {
+    "srd5e": {
+      "page": "spells.html",
+      "source": "PHB",
+      "hash": "searing%20smite_phb",
+      "propDroppable": "spell"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "wire": {
+      "damageParts": [
+        {
+          "halving": "none",
+          "application": "overtime"
+        }
+      ],
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.11",
+      "override": {
+        "target": {
+          "value": ""
+        }
+      },
+      "checkedAbility": "",
+      "upcastInterval": null,
+      "saveImmunity": false,
+      "script": "return this.pick(\n    this.isDelayedApplication(\n        this.applyTargetFromConditionAsEffective(\n            this.applyEffects(\n                this.endEffect()\n            )\n        )\n    ),\n    this.isOverTimeApplication(\n        this.performSavingThrow(\n            this.performSaveDamageRoll(\n                this.applyDamage(\n                    this.endEffectOnSave()\n                )\n            )\n        )\n    ),\n    this.defaultFlow()\n);"
+    }
+  },
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "PHB",
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": 1,
+      "units": "minute"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 0,
+      "max": "0",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": null,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "1d6",
+          "fire"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "con",
+      "dc": null,
+      "scaling": "cha"
+    },
+    "level": 1,
+    "school": "evo",
+    "components": {
+      "vocal": true,
+      "somatic": false,
+      "material": false,
+      "ritual": false,
+      "concentration": true,
+      "value": ""
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "level",
+      "formula": "1d6"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "JNEafaiyE429jyEn": 3,
+    "BDWtlDQYkOI4gQqd": 3,
+    "m7gKrZnSC3XR8ToV": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.2",
+    "coreVersion": "11.306",
+    "createdTime": 1670323171073,
+    "modifiedTime": 1694774674936,
+    "lastModifiedBy": "dBglmdrMUDMEh6ZW"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "b4ZytnWnNIWo1ezk",
+  "_key": "!items!b4ZytnWnNIWo1ezk"
+}

@@ -1,0 +1,192 @@
+{
+  "name": "Mind Sliver",
+  "type": "spell",
+  "img": "icons/magic/air/wind-vortex-swirl-purple.webp",
+  "effects": [
+    {
+      "_id": "c0c0ujp1v8qyr62u",
+      "changes": [
+        {
+          "key": "system.bonuses.abilities.save",
+          "mode": 2,
+          "value": "-1d4",
+          "priority": 0
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/air/wind-vortex-swirl-purple.webp",
+      "label": "Mind Sliver",
+      "origin": "Actor.SAXc7iTM9MbFo5vF.Item.IhyMn4qMeY7ywZJe",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "saving-throw-completed",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!ik4axHPWxaxviXiI.c0c0ujp1v8qyr62u"
+    }
+  ],
+  "flags": {
+    "srd5e": {
+      "page": "spells.html",
+      "source": "TCE",
+      "hash": "mind%20sliver_tce",
+      "propDroppable": "spell",
+      "parentClassName": "Sorcerer",
+      "parentClassSource": "PHB",
+      "parentSubclassName": "Draconic Bloodline",
+      "parentSubclassSource": "PHB"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "wire": {
+      "damageParts": [
+        {
+          "halving": "none",
+          "application": "immediate"
+        }
+      ],
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.10",
+      "override": {
+        "target": {
+          "value": "1"
+        }
+      },
+      "checkedAbility": "",
+      "saveImmunity": false
+    }
+  },
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "TCE",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": 1,
+      "units": "round"
+    },
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": 0,
+      "max": "0",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": null,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "1d6",
+          "psychic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "int",
+      "dc": null,
+      "scaling": "cha"
+    },
+    "level": 0,
+    "school": "enc",
+    "components": {
+      "value": "",
+      "vocal": true,
+      "somatic": false,
+      "material": false,
+      "ritual": false,
+      "concentration": false
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "always",
+      "prepared": true
+    },
+    "scaling": {
+      "mode": "cantrip",
+      "formula": "1d6"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "BDWtlDQYkOI4gQqd": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.0.3",
+    "coreVersion": "10.291",
+    "createdTime": 1670323166456,
+    "modifiedTime": 1694768794395,
+    "lastModifiedBy": "m7gKrZnSC3XR8ToV"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "ik4axHPWxaxviXiI",
+  "_key": "!items!ik4axHPWxaxviXiI"
+}

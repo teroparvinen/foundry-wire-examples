@@ -1,0 +1,669 @@
+{
+  "name": "Absorb Elements",
+  "type": "spell",
+  "img": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+  "effects": [
+    {
+      "_id": "dmimwf2kru4hq7xv",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "fire"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-caster",
+              "update": "apply-effects-delayed"
+            },
+            {
+              "condition": "start-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Absorb Fire",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.dmimwf2kru4hq7xv"
+    },
+    {
+      "_id": "6zmj8ugsda3evxpt",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[fire]"
+        },
+        {
+          "key": "system.bonuses.msak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[fire]"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "target-attacks.mwak",
+              "update": "end"
+            },
+            {
+              "condition": "target-attacks.msak",
+              "update": "end"
+            },
+            {
+              "condition": "end-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Fire Strike",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.6zmj8ugsda3evxpt"
+    },
+    {
+      "_id": "u94fppqtnagzfk9z",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "acid"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-caster",
+              "update": "apply-effects-delayed"
+            },
+            {
+              "condition": "start-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Absorb Acid",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.u94fppqtnagzfk9z"
+    },
+    {
+      "_id": "xs0k999xfc82twxz",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "cold"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-caster",
+              "update": "apply-effects-delayed"
+            },
+            {
+              "condition": "start-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Absorb Cold",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.xs0k999xfc82twxz"
+    },
+    {
+      "_id": "48c22fmxdtvsz5ar",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "lightning"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-caster",
+              "update": "apply-effects-delayed"
+            },
+            {
+              "condition": "start-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Absorb Lightning",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.48c22fmxdtvsz5ar"
+    },
+    {
+      "_id": "15as4y91ys6r2ac5",
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "value": "thunder"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "start-of-turn-caster",
+              "update": "apply-effects-delayed"
+            },
+            {
+              "condition": "start-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Absorb Thunder",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.15as4y91ys6r2ac5"
+    },
+    {
+      "_id": "tszh193214sqngnt",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[acid]"
+        },
+        {
+          "key": "system.bonuses.msak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[acid]"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "target-attacks.mwak",
+              "update": "end"
+            },
+            {
+              "condition": "target-attacks.msak",
+              "update": "end"
+            },
+            {
+              "condition": "end-of-turn-target",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Acid Strike",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.tszh193214sqngnt"
+    },
+    {
+      "_id": "ak3un4i7sa9bnwib",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[cold]"
+        },
+        {
+          "key": "system.bonuses.msak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[cold]"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "target-attacks.mwak",
+              "update": "end"
+            },
+            {
+              "condition": "target-attacks.msak",
+              "update": "end"
+            },
+            {
+              "condition": "end-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Cold Strike",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.ak3un4i7sa9bnwib"
+    },
+    {
+      "_id": "8a0a8ff7lq4btqk5",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[lightning]"
+        },
+        {
+          "key": "system.bonuses.msak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[lightning]"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "target-attacks.mwak",
+              "update": "end"
+            },
+            {
+              "condition": "target-attacks.msak",
+              "update": "end"
+            },
+            {
+              "condition": "end-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Lightning Strike",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.8a0a8ff7lq4btqk5"
+    },
+    {
+      "_id": "8dvsxs1rzr8hanmy",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[thunder]"
+        },
+        {
+          "key": "system.bonuses.msak.damage",
+          "mode": 2,
+          "value": "+(@config.spellLevel)d6[thunder]"
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/symbols/elements-air-earth-fire-water.webp",
+      "origin": "Actor.DYtIju3AiBnowE65.Item.OQuGEnr39BvNGp7j",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "conditions": [
+            {
+              "condition": "target-attacks.mwak",
+              "update": "end"
+            },
+            {
+              "condition": "target-attacks.msak",
+              "update": "end"
+            },
+            {
+              "condition": "end-of-turn-caster",
+              "update": "end"
+            }
+          ],
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": "",
+          "stackEffects": false,
+          "rollEffects": false
+        }
+      },
+      "tint": null,
+      "name": "Thunder Strike",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!WiX55iqO2NyQ7cPO.8dvsxs1rzr8hanmy"
+    }
+  ],
+  "flags": {
+    "srd5e": {
+      "page": "spells.html",
+      "source": "XGE",
+      "hash": "absorb%20elements_xge",
+      "propDroppable": "spell"
+    },
+    "wire": {
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.10",
+      "override": {
+        "target": {
+          "value": ""
+        }
+      },
+      "checkedAbility": "",
+      "upcastInterval": null,
+      "variants": [
+        "Acid",
+        "Cold",
+        "Fire",
+        "Lightning",
+        "Thunder"
+      ],
+      "saveImmunity": false
+    }
+  },
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "XGE",
+    "activation": {
+      "type": "reaction",
+      "cost": 1,
+      "condition": "which you take when you take acid, cold, fire, lightning, or thunder damage"
+    },
+    "duration": {
+      "value": 1,
+      "units": "round"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 0,
+      "max": "0",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "",
+    "actionType": "util",
+    "attackBonus": null,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 1,
+    "school": "abj",
+    "components": {
+      "vocal": false,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false,
+      "value": ""
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "level",
+      "formula": "1d6"
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "4b0cagUQspLdcOiS": 3,
+    "BDWtlDQYkOI4gQqd": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.2",
+    "coreVersion": "11.306",
+    "createdTime": 1670323146697,
+    "modifiedTime": 1694774808998,
+    "lastModifiedBy": "dBglmdrMUDMEh6ZW"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "WiX55iqO2NyQ7cPO",
+  "_key": "!items!WiX55iqO2NyQ7cPO"
+}

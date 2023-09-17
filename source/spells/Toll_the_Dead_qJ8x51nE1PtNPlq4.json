@@ -1,0 +1,138 @@
+{
+  "name": "Toll the Dead",
+  "type": "spell",
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "",
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": null,
+      "units": "inst"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "creature"
+    },
+    "range": {
+      "value": 60,
+      "long": null,
+      "units": "ft"
+    },
+    "uses": {
+      "value": null,
+      "max": "",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "",
+    "actionType": "save",
+    "attackBonus": 0,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [
+        [
+          "1d8[Full]",
+          "necrotic"
+        ],
+        [
+          "1d12[Wounded]",
+          "necrotic"
+        ]
+      ],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "wis",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "level": 0,
+    "school": "nec",
+    "components": {
+      "vocal": true,
+      "somatic": true,
+      "material": false,
+      "ritual": false,
+      "concentration": false,
+      "value": ""
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "cantrip",
+      "formula": ""
+    }
+  },
+  "img": "icons/magic/sonic/bell-alarm-red-purple.webp",
+  "effects": [],
+  "ownership": {
+    "default": 0,
+    "m7gKrZnSC3XR8ToV": 3
+  },
+  "flags": {
+    "wire": {
+      "override": {
+        "target": {
+          "value": "1"
+        }
+      },
+      "checkedAbility": "",
+      "damageParts": [
+        {
+          "halving": "none",
+          "application": "immediate"
+        },
+        {
+          "halving": "none",
+          "application": "immediate"
+        }
+      ],
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.11",
+      "saveImmunity": false,
+      "script": "this.registerFlowStep(\"checkDamage\", true, async (activation) => {\n    const hp = game.user.targets.first().actor.system.attributes.hp;\n    const variant = hp.value < hp.max ? \"Wounded\" : \"Full\";\n    await activation.assignConfig({ variant });\n});\n\nreturn this.performCustomStep(\"checkDamage\",\n    this.defaultFlow()\n);"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.2",
+    "coreVersion": "11.306",
+    "createdTime": 1670418919431,
+    "modifiedTime": 1694774674953,
+    "lastModifiedBy": "dBglmdrMUDMEh6ZW"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "qJ8x51nE1PtNPlq4",
+  "_key": "!items!qJ8x51nE1PtNPlq4"
+}

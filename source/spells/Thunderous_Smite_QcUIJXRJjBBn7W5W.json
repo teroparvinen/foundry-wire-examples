@@ -1,0 +1,220 @@
+{
+  "name": "Thunderous Smite",
+  "type": "spell",
+  "img": "icons/magic/lightning/bolt-strike-blue-white.webp",
+  "effects": [
+    {
+      "_id": "z4t65egjvzn0jpd0",
+      "changes": [
+        {
+          "key": "system.bonuses.mwak.damage",
+          "mode": 2,
+          "value": "+2d6[thunder]",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/lightning/bolt-strike-blue-white.webp",
+      "label": "Thunderous Smite",
+      "origin": "Actor.fRkIgd5cHxEEE8tk.Item.xuqZIKU5synbu0yt",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "applyOnSaveOrMiss": false,
+          "applicationType": "immediate",
+          "independentDuration": false,
+          "conditions": [
+            {
+              "condition": "target-hits.mwak",
+              "update": "apply-delayed"
+            }
+          ],
+          "blocksAreaConditions": false,
+          "auraTargets": ""
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!QcUIJXRJjBBn7W5W.z4t65egjvzn0jpd0"
+    },
+    {
+      "_id": "jc2gfzzbzyrioffp",
+      "changes": [
+        {
+          "key": "wire.custom.persistentStatusEffect",
+          "mode": 2,
+          "value": "Prone",
+          "priority": 20
+        }
+      ],
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "icon": "icons/magic/lightning/bolt-strike-blue-white.webp",
+      "label": "Thunderous Knockback",
+      "origin": "Actor.fRkIgd5cHxEEE8tk.Item.xuqZIKU5synbu0yt",
+      "transfer": false,
+      "flags": {
+        "wire": {
+          "applyOnSaveOrMiss": false,
+          "applicationType": "delayed",
+          "independentDuration": false,
+          "blocksAreaConditions": false,
+          "auraTargets": ""
+        }
+      },
+      "tint": null,
+      "_key": "!items.effects!QcUIJXRJjBBn7W5W.jc2gfzzbzyrioffp"
+    }
+  ],
+  "flags": {
+    "srd5e": {
+      "page": "spells.html",
+      "source": "PHB",
+      "hash": "thunderous%20smite_phb",
+      "propDroppable": "spell"
+    },
+    "midi-qol": {
+      "effectActivation": false
+    },
+    "midiProperties": {
+      "nodam": false,
+      "fulldam": false,
+      "halfdam": false,
+      "rollOther": false,
+      "critOther": false,
+      "magicdam": false,
+      "magiceffect": false,
+      "concentration": false,
+      "toggleEffect": false
+    },
+    "wire": {
+      "compendiumSource": "wire-examples.spells",
+      "compendiumVersion": "0.11",
+      "override": {
+        "target": {
+          "value": ""
+        }
+      },
+      "checkedAbility": "",
+      "saveImmunity": false,
+      "script": "return this.pick(\n    this.isDelayedApplication(\n        this.applyTargetFromCondition(\n            this.performSavingThrow(\n                this.applyEffects(\n                    this.endEffect()\n                )\n            )\n        )\n    ),\n    this.defaultFlow()\n);"
+    }
+  },
+  "system": {
+    "description": {
+      "value": "",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "PHB",
+    "activation": {
+      "type": "bonus",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": 1,
+      "units": "minute"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": null,
+      "width": null,
+      "units": "",
+      "type": "self"
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "self"
+    },
+    "uses": {
+      "value": 0,
+      "max": "0",
+      "per": "",
+      "recovery": ""
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null
+    },
+    "ability": "cha",
+    "actionType": "save",
+    "attackBonus": null,
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "str",
+      "dc": null,
+      "scaling": "cha"
+    },
+    "level": 1,
+    "school": "evo",
+    "components": {
+      "vocal": true,
+      "somatic": false,
+      "material": false,
+      "ritual": false,
+      "concentration": true,
+      "value": ""
+    },
+    "materials": {
+      "value": "",
+      "consumed": false,
+      "cost": 0,
+      "supply": 0
+    },
+    "preparation": {
+      "mode": "prepared",
+      "prepared": false
+    },
+    "scaling": {
+      "mode": "none",
+      "formula": ""
+    }
+  },
+  "ownership": {
+    "default": 0,
+    "JNEafaiyE429jyEn": 3,
+    "BDWtlDQYkOI4gQqd": 3,
+    "m7gKrZnSC3XR8ToV": 3
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.2.2",
+    "coreVersion": "11.306",
+    "createdTime": 1670323179150,
+    "modifiedTime": 1694774674920,
+    "lastModifiedBy": "dBglmdrMUDMEh6ZW"
+  },
+  "folder": null,
+  "sort": 0,
+  "_id": "QcUIJXRJjBBn7W5W",
+  "_key": "!items!QcUIJXRJjBBn7W5W"
+}

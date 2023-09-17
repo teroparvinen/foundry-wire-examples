@@ -2,15 +2,15 @@
     "id": "wire-examples",
     "title": "Whistler's Item Rolls Extended - Example Items",
     "description": "Example items for WIRE",
-    "version": "0.10.2",
+    "version": "0.11",
     "authors": [
         {
-            "name": "Tero Parvinen (Whistler#3253)"
+            "name": "Tero Parvinen (tero.p)"
         }
     ],
     "compatibility": {
-        "minimum": 10,
-        "verified": 10
+        "minimum": 11,
+        "verified": 11
     },
     "relationships": {
         "systems": [{
@@ -19,7 +19,10 @@
         }],
         "requires": [{
             "id": "wire",
-            "type": "module"
+            "type": "module",
+            "compatibility": {
+                "minimum": "0.11"
+            }
         }]
     },
     "dependencies": [
@@ -33,7 +36,7 @@
             "name": "items",
             "label": "Items (WIRE Ex)",
             "system": "dnd5e",
-            "path": "./packs/items.db",
+            "path": "./packs/items",
             "type": "Item",
             "flags": {
                 "wireImport": true
@@ -43,7 +46,7 @@
             "name": "spells",
             "label": "Spells (WIRE Ex)",
             "system": "dnd5e",
-            "path": "./packs/spells.db",
+            "path": "./packs/spells",
             "type": "Item",
             "flags": {
                 "wireImport": true
@@ -53,7 +56,7 @@
             "name": "classfeatures",
             "label": "Class Features (WIRE Ex)",
             "system": "dnd5e",
-            "path": "./packs/classfeatures.db",
+            "path": "./packs/classfeatures",
             "type": "Item",
             "flags": {
                 "wireImport": true
@@ -63,7 +66,7 @@
             "name": "monsterfeatures",
             "label": "Monster Features (WIRE Ex)",
             "system": "dnd5e",
-            "path": "./packs/monsterfeatures.db",
+            "path": "./packs/monsterfeatures",
             "type": "Item",
             "flags": {
                 "wireImport": true
