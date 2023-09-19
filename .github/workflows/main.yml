@@ -19,6 +19,10 @@ jobs:
     # Install the FoundryVTT CLI.
     - run: npm install -g @foundryvtt/foundryvtt-cli 
 
+    # Create temporary directories for monsterfeatures and items
+    - run: mkdir source/monsterfeatures
+    - run: mkdir source/items
+
     # Build Foundry packs
     - run: fvtt --id "wire-examples" --type "Module" package pack "spells" --in "source/spells" --out "packs"
     - run: fvtt --id "wire-examples" --type "Module" package pack "classfeatures" --in "source/classfeatures" --out "packs"
